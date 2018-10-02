@@ -9,6 +9,11 @@ install:
   - cd lab02
   - java pro_wrapper.java version
 
+matrix:
+  include:
+    - env: FOLDER=lab02
+    - env: FOLDER=TP1/lab1
+
 script:
   - ./pro/bin/pro version
-  - ./pro/bin/pro    
+  - ./pro/bin/pro
