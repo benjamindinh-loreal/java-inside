@@ -6,7 +6,7 @@ before_install:
   - unset _JAVA_OPTIONS
 
 install:
-  - cd lab02
+  - cd $FOLDER
   - java pro_wrapper.java version
 
 matrix:
