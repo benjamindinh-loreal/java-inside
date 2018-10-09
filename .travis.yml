@@ -17,6 +17,7 @@ matrix:
     - env: FOLDER=lab02
     - env: FOLDER=TP1/lab1    
     - env: FOLDER=lab03
+    - env: FOLDER=lab03_bis
 
 script:
   - ./pro/bin/pro version
