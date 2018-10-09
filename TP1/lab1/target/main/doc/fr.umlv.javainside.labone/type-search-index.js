@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"fr.umlv.javainside.labone","l":"JMHSample_01_HelloWorld"},{"p":"fr.umlv.javainside.labone","l":"Main"},{"p":"fr.umlv.javainside.labone","l":"Sums"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"fr.umlv.javainside.labone","l":"Main"},{"p":"fr.umlv.javainside.labone","l":"Sums"}]

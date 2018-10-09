@@ -5,9 +5,11 @@ jdk: openjdk11
 before_install:
   - unset _JAVA_OPTIONS
 
+env:
+    - PRO_SPECIAL_BUILD=early-access-amber
+
 install:
   - cd $FOLDER
-  - env: PRO_SPECIAL_BUILD=early-access-amber
   - java pro_wrapper.java version
 
 matrix:
