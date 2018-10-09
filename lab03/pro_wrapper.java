@@ -64,7 +64,7 @@ class pro_wrapper {
   }
   
   private static Optional<String> specialBuild() {
-    var specialBuild = 'PRO_SPECIAL_BUILD';
+    var specialBuild = System.getenv("PRO_SPECIAL_BUILD");;
     return Optional.ofNullable(specialBuild).filter(build -> !build.isEmpty());
   }
   
