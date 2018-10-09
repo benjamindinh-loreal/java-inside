@@ -1,0 +1,514 @@
+Classfile /home/6if2/bdinh/Documents/Java-Inside/java-inside/lab03/target/main/exploded/fr.umlv.labthree/fr/umlv/labthree/ExprSwitches.class
+  Last modified 9 oct. 2018; size 2218 bytes
+  MD5 checksum a0aaaaf6ed6731584e4121288c1fc3ad
+  Compiled from "ExprSwitches.java"
+public class fr.umlv.labthree.ExprSwitches
+  minor version: 65535 // 65535 pour preview mode
+  major version: 56
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #15                         // fr/umlv/labthree/ExprSwitches
+  super_class: #16                        // java/lang/Object
+  interfaces: 0, fields: 0, methods: 9, attributes: 3
+Constant pool:
+   #1 = Methodref          #16.#41        // java/lang/Object."<init>":()V
+   #2 = String             #42            // zero
+   #3 = String             #43            // one
+   #4 = String             #44            // a lot
+   #5 = Class              #45            // java/lang/IllegalArgumentException
+   #6 = Methodref          #5.#41         // java/lang/IllegalArgumentException."<init>":()V
+   #7 = Methodref          #29.#46        // java/lang/String.hashCode:()I
+   #8 = String             #47            // foo
+   #9 = Methodref          #29.#48        // java/lang/String.equals:(Ljava/lang/Object;)Z
+  #10 = String             #49            // viva zorg
+  #11 = String             #50            // bar
+  #12 = String             #51            // baz
+  #13 = Fieldref           #17.#52        // fr/umlv/labthree/ExprSwitches$1.$SwitchMap$fr$umlv$labthree$ExprSwitches$Messages:[I
+  #14 = Methodref          #19.#53        // fr/umlv/labthree/ExprSwitches$Messages.ordinal:()I
+  #15 = Class              #54            // fr/umlv/labthree/ExprSwitches
+  #16 = Class              #55            // java/lang/Object
+  #17 = Class              #56            // fr/umlv/labthree/ExprSwitches$1
+  #18 = Utf8               InnerClasses
+  #19 = Class              #57            // fr/umlv/labthree/ExprSwitches$Messages
+  #20 = Utf8               Messages
+  #21 = Utf8               <init>
+  #22 = Utf8               ()V
+  #23 = Utf8               Code
+  #24 = Utf8               LineNumberTable
+  #25 = Utf8               intSwitch
+  #26 = Utf8               (I)Ljava/lang/String;
+  #27 = Utf8               StackMapTable
+  #28 = Utf8               exprIntSwitch
+  #29 = Class              #58            // java/lang/String
+  #30 = Utf8               intSwitch2
+  #31 = Utf8               exprIntSwitch2
+  #32 = Utf8               stringSwitch
+  #33 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #34 = Utf8               exprStringSwitch
+  #35 = Utf8               enumSwitch
+  #36 = Utf8               (Lfr/umlv/labthree/ExprSwitches$Messages;)Ljava/lang/String;
+  #37 = Utf8               exprEnumSwitch
+  #38 = Utf8               SourceFile
+  #39 = Utf8               ExprSwitches.java
+  #40 = Utf8               NestMembers
+  #41 = NameAndType        #21:#22        // "<init>":()V
+  #42 = Utf8               zero
+  #43 = Utf8               one
+  #44 = Utf8               a lot
+  #45 = Utf8               java/lang/IllegalArgumentException
+  #46 = NameAndType        #59:#60        // hashCode:()I
+  #47 = Utf8               foo
+  #48 = NameAndType        #61:#62        // equals:(Ljava/lang/Object;)Z
+  #49 = Utf8               viva zorg
+  #50 = Utf8               bar
+  #51 = Utf8               baz
+  #52 = NameAndType        #63:#64        // $SwitchMap$fr$umlv$labthree$ExprSwitches$Messages:[I
+  #53 = NameAndType        #65:#60        // ordinal:()I
+  #54 = Utf8               fr/umlv/labthree/ExprSwitches
+  #55 = Utf8               java/lang/Object
+  #56 = Utf8               fr/umlv/labthree/ExprSwitches$1
+  #57 = Utf8               fr/umlv/labthree/ExprSwitches$Messages
+  #58 = Utf8               java/lang/String
+  #59 = Utf8               hashCode
+  #60 = Utf8               ()I
+  #61 = Utf8               equals
+  #62 = Utf8               (Ljava/lang/Object;)Z
+  #63 = Utf8               $SwitchMap$fr$umlv$labthree$ExprSwitches$Messages
+  #64 = Utf8               [I
+  #65 = Utf8               ordinal
+{
+  public fr.umlv.labthree.ExprSwitches();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 5: 0
+
+  public static java.lang.String intSwitch(int);
+    descriptor: (I)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: iload_0
+         1: tableswitch   { // 0 to 3
+                       0: 32
+                       1: 35
+                       2: 38
+                       3: 32
+                 default: 41
+            }
+        32: ldc           #2                  // String zero
+        34: areturn
+        35: ldc           #3                  // String one
+        37: areturn
+        38: ldc           #4                  // String a lot
+        40: areturn
+        41: new           #5                  // class java/lang/IllegalArgumentException
+        44: dup
+        45: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+        48: athrow
+      LineNumberTable:
+        line 15: 0
+        line 17: 32
+        line 19: 35
+        line 21: 38
+        line 24: 41
+      StackMapTable: number_of_entries = 4
+        frame_type = 32 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+
+  public static java.lang.String exprIntSwitch(int);
+    descriptor: (I)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: iload_0
+         1: tableswitch   { // 0 to 3
+                       0: 32
+                       1: 38
+                       2: 44
+                       3: 32
+                 default: 50
+            }
+        32: ldc           #2                  // String zero
+        34: astore_1
+        35: goto          58
+        38: ldc           #3                  // String one
+        40: astore_1
+        41: goto          58
+        44: ldc           #4                  // String a lot
+        46: astore_1
+        47: goto          58
+        50: new           #5                  // class java/lang/IllegalArgumentException
+        53: dup
+        54: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+        57: athrow
+        58: aload_1
+        59: areturn
+      LineNumberTable:
+        line 29: 0
+        line 30: 32
+        line 31: 38
+        line 32: 44
+        line 33: 50
+        line 29: 59
+      StackMapTable: number_of_entries = 5
+        frame_type = 32 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 7
+          locals = [ class java/lang/String ]
+
+  public static java.lang.String intSwitch2(int);
+    descriptor: (I)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: iload_0
+         1: lookupswitch  { // 4
+                       0: 44
+                       3: 44
+                      10: 47
+                     100: 50
+                 default: 53
+            }
+        44: ldc           #2                  // String zero
+        46: areturn
+        47: ldc           #3                  // String one
+        49: areturn
+        50: ldc           #4                  // String a lot
+        52: areturn
+        53: new           #5                  // class java/lang/IllegalArgumentException
+        56: dup
+        57: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+        60: athrow
+      LineNumberTable:
+        line 42: 0
+        line 44: 44
+        line 46: 47
+        line 48: 50
+        line 51: 53
+      StackMapTable: number_of_entries = 4
+        frame_type = 44 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+
+  public static java.lang.String exprIntSwitch2(int);
+    descriptor: (I)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: iload_0
+         1: lookupswitch  { // 4
+                       0: 44
+                       3: 44
+                      10: 50
+                     100: 56
+                 default: 62
+            }
+        44: ldc           #2                  // String zero
+        46: astore_1
+        47: goto          70
+        50: ldc           #3                  // String one
+        52: astore_1
+        53: goto          70
+        56: ldc           #4                  // String a lot
+        58: astore_1
+        59: goto          70
+        62: new           #5                  // class java/lang/IllegalArgumentException
+        65: dup
+        66: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+        69: athrow
+        70: aload_1
+        71: areturn
+      LineNumberTable:
+        line 56: 0
+        line 57: 44
+        line 58: 50
+        line 59: 56
+        line 60: 62
+        line 56: 71
+      StackMapTable: number_of_entries = 5
+        frame_type = 44 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 7
+          locals = [ class java/lang/String ]
+
+  public static java.lang.String stringSwitch(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: aload_0
+         1: astore_1
+         2: iconst_m1
+         3: istore_2
+         4: aload_1
+         5: invokevirtual #7                  // Method java/lang/String.hashCode:()I
+         8: lookupswitch  { // 4
+               -58193300: 66
+                   97299: 80
+                   97307: 94
+                  101574: 52
+                 default: 105
+            }
+        52: aload_1
+        53: ldc           #8                  // String foo
+        55: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        58: ifeq          105
+        61: iconst_0
+        62: istore_2
+        63: goto          105
+        66: aload_1
+        67: ldc           #10                 // String viva zorg
+        69: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        72: ifeq          105
+        75: iconst_1
+        76: istore_2
+        77: goto          105
+        80: aload_1
+        81: ldc           #11                 // String bar
+        83: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        86: ifeq          105
+        89: iconst_2
+        90: istore_2
+        91: goto          105
+        94: aload_1
+        95: ldc           #12                 // String baz
+        97: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       100: ifeq          105
+       103: iconst_3
+       104: istore_2
+       105: iload_2
+       106: tableswitch   { // 0 to 3
+                       0: 136
+                       1: 136
+                       2: 139
+                       3: 142
+                 default: 145
+            }
+       136: ldc           #2                  // String zero
+       138: areturn
+       139: ldc           #3                  // String one
+       141: areturn
+       142: ldc           #4                  // String a lot
+       144: areturn
+       145: new           #5                  // class java/lang/IllegalArgumentException
+       148: dup
+       149: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+       152: athrow
+      LineNumberTable:
+        line 69: 0
+        line 71: 136
+        line 73: 139
+        line 75: 142
+        line 78: 145
+      StackMapTable: number_of_entries = 9
+        frame_type = 253 /* append */
+          offset_delta = 52
+          locals = [ class java/lang/String, int ]
+        frame_type = 13 /* same */
+        frame_type = 13 /* same */
+        frame_type = 13 /* same */
+        frame_type = 10 /* same */
+        frame_type = 30 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 249 /* chop */
+          offset_delta = 2
+
+  public static java.lang.String exprStringSwitch(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=1
+         0: aload_0
+         1: astore_2
+         2: iconst_m1
+         3: istore_3
+         4: aload_2
+         5: invokevirtual #7                  // Method java/lang/String.hashCode:()I
+         8: lookupswitch  { // 4
+               -58193300: 66
+                   97299: 80
+                   97307: 94
+                  101574: 52
+                 default: 105
+            }
+        52: aload_2
+        53: ldc           #8                  // String foo
+        55: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        58: ifeq          105
+        61: iconst_0
+        62: istore_3
+        63: goto          105
+        66: aload_2
+        67: ldc           #10                 // String viva zorg
+        69: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        72: ifeq          105
+        75: iconst_1
+        76: istore_3
+        77: goto          105
+        80: aload_2
+        81: ldc           #11                 // String bar
+        83: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        86: ifeq          105
+        89: iconst_2
+        90: istore_3
+        91: goto          105
+        94: aload_2
+        95: ldc           #12                 // String baz
+        97: invokevirtual #9                  // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       100: ifeq          105
+       103: iconst_3
+       104: istore_3
+       105: iload_3
+       106: tableswitch   { // 0 to 3
+                       0: 136
+                       1: 136
+                       2: 142
+                       3: 148
+                 default: 154
+            }
+       136: ldc           #2                  // String zero
+       138: astore_1
+       139: goto          162
+       142: ldc           #3                  // String one
+       144: astore_1
+       145: goto          162
+       148: ldc           #4                  // String a lot
+       150: astore_1
+       151: goto          162
+       154: new           #5                  // class java/lang/IllegalArgumentException
+       157: dup
+       158: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+       161: athrow
+       162: aload_1
+       163: areturn
+      LineNumberTable:
+        line 84: 0
+        line 85: 136
+        line 86: 142
+        line 87: 148
+        line 88: 154
+        line 84: 163
+      StackMapTable: number_of_entries = 10
+        frame_type = 254 /* append */
+          offset_delta = 52
+          locals = [ top, class java/lang/String, int ]
+        frame_type = 13 /* same */
+        frame_type = 13 /* same */
+        frame_type = 13 /* same */
+        frame_type = 10 /* same */
+        frame_type = 30 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 7
+          locals = [ class java/lang/String, class java/lang/String ]
+          stack = []
+
+  public static java.lang.String enumSwitch(fr.umlv.labthree.ExprSwitches$Messages);
+    descriptor: (Lfr/umlv/labthree/ExprSwitches$Messages;)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #13                 // Field fr/umlv/labthree/ExprSwitches$1.$SwitchMap$fr$umlv$labthree$ExprSwitches$Messages:[I
+         3: aload_0
+         4: invokevirtual #14                 // Method fr/umlv/labthree/ExprSwitches$Messages.ordinal:()I
+         7: iaload
+         8: tableswitch   { // 1 to 4
+                       1: 40
+                       2: 40
+                       3: 43
+                       4: 46
+                 default: 49
+            }
+        40: ldc           #2                  // String zero
+        42: areturn
+        43: ldc           #3                  // String one
+        45: areturn
+        46: ldc           #4                  // String a lot
+        48: areturn
+        49: new           #5                  // class java/lang/IllegalArgumentException
+        52: dup
+        53: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+        56: athrow
+      LineNumberTable:
+        line 97: 0
+        line 99: 40
+        line 101: 43
+        line 103: 46
+        line 106: 49
+      StackMapTable: number_of_entries = 4
+        frame_type = 40 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+        frame_type = 2 /* same */
+
+  public static java.lang.String exprEnumSwitch(fr.umlv.labthree.ExprSwitches$Messages);
+    descriptor: (Lfr/umlv/labthree/ExprSwitches$Messages;)Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: getstatic     #13                 // Field fr/umlv/labthree/ExprSwitches$1.$SwitchMap$fr$umlv$labthree$ExprSwitches$Messages:[I
+         3: aload_0
+         4: invokevirtual #14                 // Method fr/umlv/labthree/ExprSwitches$Messages.ordinal:()I
+         7: iaload
+         8: tableswitch   { // 1 to 4
+                       1: 40
+                       2: 40
+                       3: 46
+                       4: 52
+                 default: 58
+            }
+        40: ldc           #2                  // String zero
+        42: astore_1
+        43: goto          66
+        46: ldc           #3                  // String one
+        48: astore_1
+        49: goto          66
+        52: ldc           #4                  // String a lot
+        54: astore_1
+        55: goto          66
+        58: new           #5                  // class java/lang/IllegalArgumentException
+        61: dup
+        62: invokespecial #6                  // Method java/lang/IllegalArgumentException."<init>":()V
+        65: athrow
+        66: aload_1
+        67: areturn
+      LineNumberTable:
+        line 111: 0
+        line 112: 40
+        line 113: 46
+        line 114: 52
+        line 115: 58
+        line 111: 67
+      StackMapTable: number_of_entries = 5
+        frame_type = 40 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 5 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 7
+          locals = [ class java/lang/String ]
+}
+SourceFile: "ExprSwitches.java"
+NestMembers:
+  fr/umlv/labthree/ExprSwitches$1
+  fr/umlv/labthree/ExprSwitches$Messages
+InnerClasses:
+  static #17;                             // class fr/umlv/labthree/ExprSwitches$1
+  public static final #20= #19 of #15;    // Messages=class fr/umlv/labthree/ExprSwitches$Messages of class fr/umlv/labthree/ExprSwitches
