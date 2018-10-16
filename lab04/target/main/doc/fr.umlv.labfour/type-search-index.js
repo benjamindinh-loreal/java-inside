@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"fr.umlv.labfour","l":"Example1"},{"p":"fr.umlv.labfour","l":"Main"}]

@@ -5,19 +5,17 @@ jdk: openjdk11
 before_install:
   - unset _JAVA_OPTIONS
 
-env:
-  - PRO_SPECIAL_BUILD=early-access-amber
-
 install:
   - cd $FOLDER
   - java pro_wrapper.java version
 
 matrix:
   include:
-    - env: FOLDER=lab02
-    - env: FOLDER=TP1/lab1    
-    - env: FOLDER=lab03
-    - env: FOLDER=lab03_bis
+    - env: FOLDER=lab02 PRO_SPECIAL_BUILD=early-access-amber
+    - env: FOLDER=TP1/lab1 PRO_SPECIAL_BUILD=early-access-amber  
+    - env: FOLDER=lab03 PRO_SPECIAL_BUILD=early-access
+    - env: FOLDER=lab03_bis PRO_SPECIAL_BUILD=early-access-amber
+    - env: FOLDER=lab04 PRO_SPECIAL_BUILD=early-access-amber
 
 script:
   - ./pro/bin/pro version
