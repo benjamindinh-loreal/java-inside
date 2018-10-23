@@ -16,6 +16,7 @@ matrix:
     - env: FOLDER=lab03 PRO_SPECIAL_BUILD=early-access
     - env: FOLDER=lab03_bis PRO_SPECIAL_BUILD=early-access-amber
     - env: FOLDER=lab04 PRO_SPECIAL_BUILD=early-access-loom
+    - env: FOLDER=lab05 PRO_SPECIAL_BUILD=early-access
 
 script:
   - ./pro/bin/pro version
