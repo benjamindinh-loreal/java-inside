@@ -1,17 +1,21 @@
 package fr.umlv.labfive;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.UndeclaredThrowableException;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Main {
+public class Serialiser {
+	
+	private final ClassValue<Method[]> cache = new ClassValue<Method[]>() {
+		@Override
+		public Method[] computeValue(Class<?> type) {
+			return type.getMethods() ;
+		}
+	} ;
 	
 	static class Person {
 	  private final String firstName;
@@ -50,6 +54,13 @@ public class Main {
 	    return planet;
 	  }
 	  
+	  /* 
+	   * getMethod retourne un tableau mutable de méthode mutable donc il faut copier a chaques fois toutes les méthodes.
+	   * 
+	   * Il y a donc de multiples copies de méthodes ce qui est lent (double copie défensive).
+	   * */
+	  
+	  
 	  @JSONProperty(rename = "age")
 	  public int getAge() {
 	    return age;
@@ -57,13 +68,14 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(toJSON(new Alien("Mars",6875))) ;
-		assertEquals("{\n\"planet\": \"Mars\"\n\"age\": \"6875\"\n}", toJSON(new Alien("Mars",6875))) ;
-		assertEquals("{\n\"firstName\": \"Ben\"\n\"lastName\": \"Dinh\"\n}", toJSON(new Person("Ben","Dinh"))) ;
+		Serialiser s = new Serialiser() ;
+		System.out.println(s.toJSON(new Alien("Mars",6875))) ;
+		assertEquals("{\n\"planet\": \"Mars\"\n\"age\": \"6875\"\n}", s.toJSON(new Alien("Mars",6875))) ;
+		assertEquals("{\n\"firstName\": \"Ben\"\n\"lastName\": \"Dinh\"\n}", s.toJSON(new Person("Ben","Dinh"))) ;
 	}
 	
-	public static String toJSON(Object object) {
-		var s = Arrays.stream(object.getClass().getMethods())
+	public String toJSON(Object object) {
+		var s = Arrays.stream(cache.get(object.getClass()))
 				.filter(m -> isAnnotationPresent(m) && isAGoodGetter(m) && isObjectOrGetClass(m))
 				.map(m -> "\"" + getPropertyName(m) + "\": \"" + executeMethod(object, m) + "\"\n")
 				.collect(Collectors.joining());
@@ -71,7 +83,7 @@ public class Main {
 		return "{\n" + s + "}" ;
 	}
 
-	private static String getPropertyName(Method m) {
+	private String getPropertyName(Method m) {
 		
 		var property = m.getAnnotation(JSONProperty.class);
 		
@@ -81,23 +93,23 @@ public class Main {
 			return property.rename() ;
 	}
 
-	private static boolean isAnnotationPresent(Method m) {
+	private boolean isAnnotationPresent(Method m) {
 		return m.isAnnotationPresent(JSONProperty.class);
 	}
 
-	private static boolean isAGoodGetter(Method m) {
+	private boolean isAGoodGetter(Method m) {
 		return m.getParameterCount() == 0 && m.getName().startsWith("get");
 	}
 
-	private static boolean isObjectOrGetClass(Method m) {
+	private boolean isObjectOrGetClass(Method m) {
 		return !m.getName().equals("getClass") ;
 	}
 
-	private static String propertyName(String name) {
+	private String propertyName(String name) {
 		return Character.toLowerCase(name.charAt(3)) + name.substring(4);
 	}
 
-	private static Object executeMethod(Object o, Method m) {
+	private Object executeMethod(Object o, Method m) {
 		try {
 			return m.invoke(o);
 		} catch (IllegalAccessException x) {
